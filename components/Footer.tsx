@@ -3,7 +3,7 @@ import {FaFacebookF, FaInstagram, FaWhatsapp} from 'react-icons/fa'
 
 const Footer = () => {
   return (
-    <div className="w-full flex justify-between mb-8">
+    <div className="w-full max-w-full flex justify-between mb-8 z-0 absolute self-end">
         <p> Homepage </p>
         <div className="w-52 gap-6 flex ">
             <FaFacebookF/>
