@@ -9,24 +9,24 @@ const Home = () => {
 
   return (
     
-    <div className="w-screen h-screen px-6  flex flex-col ">
-      <div className="flex "> 
+    <div className="w-screen h-full  flex flex-col ">
+      <div className="flex box-border w-full "> 
       <Header />
 
-        <div className="flex w-screen h-screen  flex-col justify-center z-0 ">
-            <div className='flex flex-col max-w-xs gap-6 '>
-              <h1 className=' whitespace-nowrap	font-Gloock text-6xl'> 
-                Photographer <br/>based in Montreal
+        <div className="flex w-1/2 h-screen  flex-col justify-center z-0 px-6">
+            <div className='flex flex-col  gap-6 self-end '>
+              <h1 className='font-Gloock max-w-xs text-6xl tracking-wider	'> 
+                Photographer <br/> <span className="whitespace-nowrap"> based in Montreal</span>
               </h1>
-              <p className="flex-wrap max-w-sm  self-end ml-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus praesentium, laudantium eius quae rerum dignissimos accusantium perferendis maxime? Assumenda numquam odio nisi! Quisquam, quas! In accusamus sed omnis fuga non.</p>
+              <p className="flex-wrap max-w-md ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus praesentium, laudantium eius quae rerum dignissimos accusantium perferendis maxime? Assumenda numquam odio nisi! Quisquam, quas! In accusamus sed omnis fuga non.</p>
             </div>
             <div className=" py-9 h-28 border-l-2 border-black ">
 
           </div>
         </div>
 
-        <div className="flex h-screen w-screen shrink ">
-          <Image  alt="" src={homePic} />
+        <div className="flex h-screen w-1/2 shrink ">
+          <Image  alt="" src={homePic} width="1080" height={1350} className="object-cover"/>
         </div>
         <Footer />
       </div>

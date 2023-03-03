@@ -7,8 +7,8 @@ const Header = () => {
    
   const path = [{name: "Home", path: "/"}, {name: "About", path: "/about"}, {name: "Contact", path: "/contact"}]
   return (
-    <div className="w-full h-16  flex items-center justify-between z-0 absolute">
-        <div className="gap-96 flex"> 
+    <div className="w-full h-16  flex items-center justify-between z-0 absolute px-6 font-semibold font-Oswald text-md uppercase">
+        <div className="gap-72 flex"> 
             <p> Logo</p>
             <div className="w-64 flex justify-between ">
                 

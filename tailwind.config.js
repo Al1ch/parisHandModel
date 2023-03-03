@@ -13,6 +13,7 @@ module.exports = {
     extend: {
       fontFamily: {
         Gloock: ["Gloock", "sans-serif"],
+        Oswald: ["Oswald", "sans-serif"],
       },
     },
   },
