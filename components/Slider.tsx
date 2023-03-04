@@ -9,7 +9,8 @@ import Slick from 'react-slick'
 
 
 const Slider = () => {
-    const data = [{id:1 , image: homePic}, {id:2 , image: clairVoyant }]
+    const data = [ {id:2 , image: clairVoyant }, {id:3, image:clairVoyant}]
+
     const settings = {
         dots: true,
         infinite: true,
@@ -22,16 +23,16 @@ const Slider = () => {
             {dots}
          </ul>),
         customPaging: (i :any) =>(
-            <div className="w-3 h-3 bg-gray-500 rounded-full flex flex-col"> </div>
+            <div className="w-3 h-3 bg-red-500 rounded-full flex flex-col "> </div>
         )
 
       };
   return (
-        <Slick {...settings}className='m-w-9 mr-5 overflow-hidden' >
+        <Slick {...settings}className=' overflow-hidden' >
         {
             data.map((item, index) => (
-                <div key={item.id}>
-                    <Image src={item.image} alt="" />
+                <div key={item.id} className="">
+                    <Image src={item.image} alt="" className="object-cover "/>
                 </div>
             ))
         }

@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .animationLeftRight {
+    @apply opacity-0 -translate-x-2 transition  ease-in;
+  }
+  .textInView {
+    @apply opacity-100 transform-none;
+  }
+  .textFont {
+    @apply font-Oswald text-sm uppercase font-semibold;
+  }
+  .h1Font {
+    @apply font-Gloock text-6xl;
+  }
+  .animationTopBottom {
+    @apply opacity-0 -translate-y-10 transition delay-150 duration-300;
+  }
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
 
 * {
