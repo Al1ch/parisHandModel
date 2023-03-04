@@ -21,7 +21,7 @@ const Home = () => {
       <div className="flex box-border w-full "> 
       <Header />
 
-        <div className="flex w-1/2 h-screen  flex-col justify-center z-0 px-6">
+        <div className="flex w-1/2 h-screen  flex-col justify-center px-6">
             <div className='flex flex-col  gap-6 self-end '>
               <h1 className="h1Font tracking-wider  max-w-xs "> 
                 <span className={cn("animationTopBottom block delay-100",{"opacity-100 transform-none":inView} )}>Photographer</span> 
