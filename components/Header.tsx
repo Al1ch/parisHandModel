@@ -3,7 +3,7 @@ import { global } from 'styled-jsx/css'
 import Link from 'next/link'
 import {FaSearch} from 'react-icons/fa'
 import { useInView } from 'react-intersection-observer'
-import classNames from 'classnames'
+import cn from 'classnames'
 
 const Header = () => {
     const { ref, inView, entry } = useInView({
@@ -15,13 +15,13 @@ const Header = () => {
   return (
     <div ref={ref} className="w-full h-16  flex items-center justify-between z-2 absolute px-6 textFont">
         <div className="gap-72 flex"> 
-            <p className={classNames("animationLeftRight ",{"textInView": inView})} > Logo</p>
+            <p className={cn("animationLeftRight ",{"textInView": inView})} > Logo</p>
             <div className="w-64 flex justify-between ">
                 
                 {
                     path.map((item) =>(
-                        <Link href={item.path} key={item.id} className=" relative hover:after:w-full hover:before:w-full before:content-[''] before:absolute before:bg-black before:w-0 before:h-0.5 after:content-[''] after:absolute after:bg-black after:w-0 after:h-0.5" >
-                            <p className={classNames(" animationLeftRight delay-100",{"textInView": inView})}>{item.name}</p>
+                        <Link href={item.path} key={item.id} className={cn ("relative  transition duration-700  hover:after:w-6/12 hover:before:w-6/12  before:translate-x-1/2 before:content-[''] before:absolute before:bg-black before:w-0 before:h-0.5 after:content-[''] after:absolute after:bg-black after:w-0 after:h-0.5 after:translate-x-1/2 hover:after:opacity-100 hover:before:opacity-100")}>
+                            <p className={cn(" animationLeftRight delay-100",{"textInView": inView})}>{item.name}</p>
                         </Link>
                         )
                     )
@@ -31,7 +31,7 @@ const Header = () => {
         <div className="h-full flex items-center justify-between gap-3 "> 
 
             <FaSearch className="fill-white"/>
-            <p className={classNames("animationLeftRight ",{"textInView": inView})}> Langue à voir </p>
+            <p className={cn("animationLeftRight ",{"textInView": inView})}> Langue à voir </p>
         </div>
         
 
