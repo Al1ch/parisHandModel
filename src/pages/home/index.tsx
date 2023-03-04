@@ -4,6 +4,10 @@ import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import Image from 'next/image';
 import homePic from "../../../assets/images/homePic.jpg"
+import Slider from '../../../components/Slider';
+import "slick-carousel/slick/slick.css";
+
+import "slick-carousel/slick/slick-theme.css";
 
 const Home = () => {
 
@@ -20,13 +24,12 @@ const Home = () => {
               </h1>
               <p className="flex-wrap max-w-md ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus praesentium, laudantium eius quae rerum dignissimos accusantium perferendis maxime? Assumenda numquam odio nisi! Quisquam, quas! In accusamus sed omnis fuga non.</p>
             </div>
-            <div className=" py-9 h-28 border-l-2 border-black ">
-
-          </div>
+            <div className=" py-9 h-28 border-l-2 border-black mt-6">
+            </div>
         </div>
 
-        <div className="flex h-screen w-1/2 shrink ">
-          <Image  alt="" src={homePic} width="1080" height={1350} className="object-cover"/>
+        <div className="flex h-screen w-1/2 ">
+          <Slider />
         </div>
         <Footer />
       </div>
