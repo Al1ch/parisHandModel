@@ -23,14 +23,14 @@ const Footer = () => {
 
   return (
     <div ref={ref} className="w-full max-w-full flex justify-between mb-8 z-0 absolute self-end px-6">
-        <p className={cn(" animationLeftRight delay-150 textFont",{"textInView": inView})}> Homepage </p>
+        <p className={cn(" animationLeftRight delay-300 textFont",{"textInView": inView})}> Homepage </p>
         <div className="w-50 gap-6 flex ">
           {socialMedia.map((item) =>(
-            <Image key={item.id} alt="" src={item.image}  className={cn(`animationLeftRight delay-[{calc(${item.id /3 *400 +200})}ms]` ,{"textInView": inView} )} />
+            <Image key={item.id} alt="" src={item.image}  className={cn(`animationLeftRight ` ,{"textInView": inView} )} />
           ))}
         </div>
         <div className='flex gap-16'> 
-            <div className={cn(" fill-white animationLeftRight border-b-2 border-grey-500 w-28  ",{"textInView": inView})}></div>
+            <div className={cn(" fill-white animationLeftRight border-b-2 border-grey-500 w-28   ",{"textInView": inView})}></div>
             <p className="textFont"> Page Name</p> 
         </div>
 

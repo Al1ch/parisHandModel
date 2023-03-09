@@ -15,6 +15,10 @@ module.exports = {
         Gloock: ["Gloock", "sans-serif"],
         Oswald: ["Oswald", "sans-serif"],
       },
+
+      animation: {
+        "fade-left-right": "fade-in-down 1s ease-out",
+      },
     },
   },
   plugins: [],
