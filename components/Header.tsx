@@ -13,7 +13,7 @@ const Header = () => {
    
   const path = [{name: "Home", path: "/home", id:1}, {name: "About", path: "/about",id:2}, {name: "Contact", path: "/contact", id:3}]
   return (
-    <div ref={ref} className="w-full h-16  flex items-center justify-between z-10 absolute px-6 textFont">
+    <div ref={ref} className="w-full h-16  flex items-center justify-between z-20 absolute px-6 textFont">
         <div className="gap-72 flex"> 
             <p className={"animate-fade-in "} > Logo</p>
             <div className="w-64 flex justify-between ">
