@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -16,10 +19,48 @@ module.exports = {
         Oswald: ["Oswald", "sans-serif"],
       },
 
+      keyframes: {
+        fadeIn: {
+          "0%": { transform: " translate3d(-50px,0,0)", opacity: "0" },
+          "100%": { transform: " translate3d(0)", opacity: "1" },
+        },
+        fadeBottom: {
+          "0%": { transform: " translate3d(0,-100px,0)", opacity: "0" },
+          "100%": { transform: " translate3d(0)", opacity: "1" },
+        },
+        fadeLeft: {
+          "0%": { transform: " translate3d(1000px,0,0)", opacity: "1" },
+          "50%": { transform: " translate3d(0,0,0)", opacity: "1" },
+          "100%": { transform: " translate3d(1000px,0, 0)", opacity: "1" },
+        },
+        fadeLeftImage: {
+          "0%": { transform: " translate3d(1000px,0,0)", opacity: "0" },
+          "100%": { transform: " translate3d(0,0,0)" },
+        },
+      },
+
       animation: {
-        "fade-left-right": "fade-in-down 1s ease-out",
+        "fade-in": "fadeIn 0.4s ease-in-out",
+        "fade-bottom": " fadeBottom 0.4s ease-in-out ",
+        "fade-left": " fadeLeft 1.1s ease-in ",
+        "fade-left-image": " fadeLeftImage 0.7s ease-in ",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ matchUtilities, theme }) => {
+      matchUtilities(
+        {
+          "animation-delay": (value) => {
+            return {
+              "animation-delay": value,
+            };
+          },
+        },
+        {
+          values: theme("transitionDelay"),
+        }
+      );
+    }),
+  ],
 };
