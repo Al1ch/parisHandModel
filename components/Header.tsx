@@ -20,7 +20,7 @@ const Header = () => {
                 
                 {
                     path.map((item) =>(
-                        <Link href={item.path} key={item.id} className={cn ("relative  transition hover:before:duration-300 hover:after:duration-300  hover:after:w-6/12 hover:before:w-6/12  before:translate-x-1/2 before:content-[''] before:absolute before:bg-black before:w-0 before:h-0.5 after:content-[''] after:absolute after:bg-black after:w-0 after:h-0.5 after:translate-x-1/2 hover:after:opacity-100 hover:before:opacity-100")}>
+                        <Link href={item.path} key={item.id} className={cn ("relative  transition   before:translate-x-1/2 before:content-[''] before:absolute before:bg-black before:w-0 before:h-0.5 after:content-[''] after:absolute after:bg-black after:w-0 after:h-0.5 after:translate-x-1/2 hover:after:opacity-100 hover:before:opacity-100 hover:before:duration-300 hover:after:duration-300  hover:after:w-6/12 hover:before:w-6/12")}>
                             <p className={ "animate-fade-in  delay-200"}>{item.name}</p>
                         </Link>
                         )

@@ -18,6 +18,9 @@ module.exports = {
         Gloock: ["Gloock", "sans-serif"],
         Oswald: ["Oswald", "sans-serif"],
       },
+      gridTemplateColumns: {
+        "auto-fill": "repeat(auto-fit, minmax(270px, 1fr));",
+      },
 
       keyframes: {
         fadeIn: {
